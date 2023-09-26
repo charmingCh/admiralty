@@ -1,7 +1,7 @@
 nameOverride: ""
 fullnameOverride: ""
 
-#imagePullSecretName: ""
+imagePullSecretName: cr-autra-cn-beijing
 
 sourceController:
   enabled: true
@@ -9,7 +9,7 @@ sourceController:
 controllerManager:
   replicas: 2
   image:
-    repository: "quay.io/admiralty/multicluster-scheduler-agent"
+    repository: "autra-cn-beijing.cr.volces.com/autra/multicluster-scheduler-agent"
     tag: "" # (default: .Chart.AppVersion)
     pullPolicy: IfNotPresent
   resources: {}
@@ -36,7 +36,7 @@ controllerManager:
 scheduler:
   replicas: 2
   image:
-    repository: "quay.io/admiralty/multicluster-scheduler-scheduler"
+    repository: "autra-cn-beijing.cr.volces.com/autra/multicluster-scheduler-scheduler"
     tag: "" # (default: .Chart.AppVersion)
     pullPolicy: IfNotPresent
   resources: {}
@@ -62,7 +62,7 @@ scheduler:
 
 postDeleteJob:
   image:
-    repository: "quay.io/admiralty/multicluster-scheduler-remove-finalizers"
+    repository: "autra-cn-beijing.cr.volces.com/autra/multicluster-scheduler-remove-finalizers"
     tag: "" # (default: .Chart.AppVersion)
     pullPolicy: IfNotPresent
   nodeSelector: {}
@@ -89,7 +89,7 @@ postDeleteJob:
 restarter:
   replicas: 2
   image:
-    repository: "quay.io/admiralty/multicluster-scheduler-restarter"
+    repository: "autra-cn-beijing.cr.volces.com/autra/multicluster-scheduler-restarter"
     tag: "" # (default: .Chart.AppVersion)
     pullPolicy: IfNotPresent
   nodeSelector: {}
