@@ -1,7 +1,7 @@
 nameOverride: ""
 fullnameOverride: ""
 
-#imagePullSecretName: ""
+imagePullSecretName: cr-autra-cn-beijing
 
 clusterName: ""
 
@@ -11,7 +11,7 @@ sourceController:
 controllerManager:
   replicas: 2
   image:
-    repository: "public.ecr.aws/admiralty/admiralty-agent"
+    repository: "autra-cn-beijing.cr.volces.com/autra/admiralty-agent"
     tag: "" # (default: .Chart.AppVersion)
     pullPolicy: IfNotPresent
   resources: {}
@@ -38,7 +38,7 @@ controllerManager:
 scheduler:
   replicas: 2
   image:
-    repository: "public.ecr.aws/admiralty/admiralty-scheduler"
+    repository: "autra-cn-beijing.cr.volces.com/autra/admiralty-scheduler"
     tag: "" # (default: .Chart.AppVersion)
     pullPolicy: IfNotPresent
   resources: {}
@@ -64,7 +64,7 @@ scheduler:
 
 postDeleteJob:
   image:
-    repository: "public.ecr.aws/admiralty/admiralty-remove-finalizers"
+    repository: "autra-cn-beijing.cr.volces.com/autra/admiralty-remove-finalizers"
     tag: "" # (default: .Chart.AppVersion)
     pullPolicy: IfNotPresent
   nodeSelector: {}
@@ -91,7 +91,7 @@ postDeleteJob:
 restarter:
   replicas: 2
   image:
-    repository: "public.ecr.aws/admiralty/admiralty-restarter"
+    repository: "autra-cn-beijing.cr.volces.com/autra/admiralty-restarter"
     tag: "" # (default: .Chart.AppVersion)
     pullPolicy: IfNotPresent
   nodeSelector: {}

@@ -23,6 +23,8 @@ root_package=admiralty.io/multicluster-scheduler
 # environment variables
 # optional
 VERSION="${VERSION:-dev}"
+CR="${CR:-autra-cn-beijing.cr.volces.com/autra}"
+
 
 if [ "$VERSION" = dev ] || [ "${CI:-}" = true ]; then
   linux_archs=(amd64)
@@ -31,7 +33,7 @@ else
 fi
 
 for arch in "${linux_archs[@]}"; do
-  export ARCH=$arch
+  export ARCH=$arch VERSION=$VERSION CR=$CR
   PKG=$root_package/cmd/agent ./build/build_one.sh
   PKG=$root_package/cmd/remove-finalizers ./build/build_one.sh
   PKG=$root_package/cmd/restarter ./build/build_one.sh
