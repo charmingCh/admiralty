@@ -15,7 +15,7 @@ require (
 	k8s.io/client-go v0.27.4
 	k8s.io/code-generator v0.27.4
 	k8s.io/component-base v0.27.4
-	k8s.io/klog/v2 v2.90.1
+	k8s.io/klog/v2 v2.130.1
 	k8s.io/kubernetes v1.27.4
 	k8s.io/sample-controller v0.27.4
 	sigs.k8s.io/controller-runtime v0.15.0
@@ -40,7 +40,7 @@ require (
 	github.com/evanphx/json-patch/v5 v5.6.0 // indirect
 	github.com/felixge/httpsnoop v1.0.3 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
-	github.com/go-logr/logr v1.2.4 // indirect
+	github.com/go-logr/logr v1.4.1 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-openapi/jsonpointer v0.19.6 // indirect
 	github.com/go-openapi/jsonreference v0.20.1 // indirect
